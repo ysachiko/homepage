@@ -19,31 +19,31 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button';
 
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
-    const active = path === href
-    const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-    return (
-        <Link
-            as={NextLink}
-            href={href}
-            scroll={false}
-            p={2}
-            bg={active ? 'grassTeal' : undefined}
-            color={active ? '#202023' : inactiveColor}
-            target={target}
-        {...props}
-      >
-        {children}
-      </Link>
-    )
-}
+// const LinkItem = ({ href, path, target, children, ...props }) => {
+//     const active = path === href
+//     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+//     return (
+//         <Link
+//             as={NextLink}
+//             href={href}
+//             scroll={false}
+//             p={2}
+//             bg={active ? 'grassTeal' : undefined}
+//             color={active ? '#202023' : inactiveColor}
+//             target={target}
+//         {...props}
+//       >
+//         {children}
+//       </Link>
+//     )
+// }
 
 const MenuLink = forwardRef((props, ref) => (
     <Link ref={ref} as={NextLink} {...props} />
   ))
 
 const Navbar = props => {
-    const {path} = props
+    // const {path} = props
 
     return (
         <Box position="fixed" as="nav" w="100%" bg={useColorModeValue('#ffffff40', '#20202380')} style={{backdropFilter:'blur(10px'}} zIndex={1} {...props}>

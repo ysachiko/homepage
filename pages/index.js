@@ -4,13 +4,9 @@ import {
     Container,
     Heading,
     Box,
-    SimpleGrid,
     Button,
-    List,
-    ListItem,
     Image,
     useColorModeValue,
-    chakra
   } from '@chakra-ui/react'
 import Section from "../components/section";
 import Paragraph from '../components/paragraph'
@@ -21,7 +17,7 @@ const Page = () => {
     return (
         <Container>
             <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mt={10} mb={6} align="center">
-                Hi, I'm a frontend developer based in Moscow, Russia.
+                Hi, I&apos;m a frontend developer based in Moscow, Russia.
             </Box>
             <Box display={{md:'flex'}}>
                 <Box flexGrow={1}>
@@ -68,9 +64,9 @@ const Page = () => {
                     <Paragraph>
                     Greetings, friends. 
                     As you may have already read, 
-                    I am a frontend developer, working for the Russian company "Samokat". 
+                    I am a frontend developer, working for the Russian company &ldquo;Samokat&ldquo;. 
                     I made this site to flex and learn Next.JS and Chakra. 
-                    I'm in love with vinyl, make a smart home, and am a delicious cook. 
+                    I&lsquo;m in love with vinyl, make a smart home, and am a delicious cook. 
                     You can always subscribe to me on {' '}
                         <Link as={NextLink} href="https://www.instagram.com/fluttybeats/" passHref scroll={false}>
                             instagram

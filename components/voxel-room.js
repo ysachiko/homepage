@@ -37,7 +37,7 @@ const VoxelRoom = () => {
 			
 		}
 	}, [renderer]);
-
+	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
 		const {current: container} = refContainer;
 		if (container && !renderer) {
@@ -115,7 +115,7 @@ const VoxelRoom = () => {
 			  } 
 		}
 	}, [])
-
+	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
 		window.addEventListener('resize', handleWindowResize, false)
 		return () => {
