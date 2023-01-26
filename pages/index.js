@@ -76,7 +76,7 @@ const Page = () => {
                     <Box align="center" my={4}>
                         <Button
                             as={NextLink}
-                            href="/works"
+                            href="https://github.com/ysachiko"
                             scroll={false}
                             rightIcon={<ChevronRightIcon />}
                             colorScheme="teal"
