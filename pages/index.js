@@ -62,16 +62,16 @@ const Page = () => {
                     Work
                 </Heading>
                     <Paragraph>
-                    Greetings, friends. 
+                    Greetings, guys. 
                     As you may have already read, 
                     I am a frontend developer, working for the Russian company &ldquo;Samokat&ldquo;. 
                     I made this site to flex and learn Next.JS and Chakra. 
-                    I&lsquo;m in love with vinyl, make a smart home, and am a delicious cook. 
+                    I&lsquo;m in love with vinyl, amazing at cooking and currently making a smart home. 
                     You can always subscribe to me on {' '}
                         <Link as={NextLink} href="https://www.instagram.com/fluttybeats/" passHref scroll={false}>
                             instagram
                         </Link>
-                    . Also you can check my github, there are no particularly interesting projects there yet, but someday there will be.
+                    . Also you can check my github, there are no particularly interesting projects yet, but someday there will be.
                     </Paragraph>
                     <Box align="center" my={4}>
                         <Button
