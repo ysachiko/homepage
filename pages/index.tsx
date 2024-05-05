@@ -14,6 +14,20 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 import { BioSection, BioYear } from '../components/bio';
 import VoxelRoom from '../components/voxel-room'
 import NoSsr from "../components/no-ssr";
+import styled from '@emotion/styled';
+
+const ButtonContainer = styled(Box)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px 0;
+`
+
+const AboutTitle = styled(Box)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
 
 const Page = () => {
     return (
@@ -21,9 +35,9 @@ const Page = () => {
             <NoSsr>
                 <VoxelRoom modelName='/my_computer.glb' pos={{x:-0.5, y:0, z:0}} />
             </NoSsr>
-            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mt={10} mb={6} align="center">
+            <AboutTitle borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mt={10} mb={6}>
                 Hi, I&apos;m a frontend developer based in Moscow, Russia.
-            </Box>
+            </AboutTitle>
             <Box display={{md:'flex'}}>
                 <Box flexGrow={1}>
                     <Heading as="h2" variant="page-title">
@@ -78,7 +92,7 @@ const Page = () => {
                     </Link>
                     . Also you can check my github, there are no particularly interesting projects yet, but someday there will be.
                 </Paragraph>
-                <Box align="center" my={4}>
+                <ButtonContainer>
                     <Button
                         as={NextLink}
                         href="https://github.com/ysachiko"
@@ -88,7 +102,7 @@ const Page = () => {
                     >
                         my git
                     </Button>
-                </Box>
+                </ButtonContainer>
             </Section>
 
             <Section delay={0.2}>
