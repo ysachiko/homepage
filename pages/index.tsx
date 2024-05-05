@@ -7,26 +7,31 @@ import {
     Button,
     Image,
     useColorModeValue,
-  } from '@chakra-ui/react'
+} from '@chakra-ui/react'
 import Section from "../components/section";
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { BioSection, BioYear } from '../components/bio';
+import VoxelRoom from '../components/voxel-room'
+import NoSsr from "../components/no-ssr";
 
 const Page = () => {
     return (
         <Container>
+            <NoSsr>
+                <VoxelRoom modelName='/my_computer.glb' pos={{x:-0.5, y:0, z:0}} />
+            </NoSsr>
             <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mt={10} mb={6} align="center">
                 Hi, I&apos;m a frontend developer based in Moscow, Russia.
             </Box>
             <Box display={{md:'flex'}}>
                 <Box flexGrow={1}>
-                 <Heading as="h2" variant="page-title">
-                    Yura Kovalev
-                 </Heading>
-                 <p>
-                    Internet Serfer ( Musician / Developer / Flower Boy)
-                 </p>
+                    <Heading as="h2" variant="page-title">
+                        Yura Kovalev
+                    </Heading>
+                    <p>
+                        Internet Serfer (Musician / Developer / Flower Boy)
+                    </p>
                 </Box>
                 <Box
                     flexShrink={0}
@@ -61,29 +66,29 @@ const Page = () => {
                 <Heading as="h3" variant="section-title">
                     Work
                 </Heading>
-                    <Paragraph>
+                <Paragraph>
                     Greetings, guys. 
                     As you may have already read, 
                     I am a frontend developer, working for the Russian company &ldquo;Sbermarket&ldquo;. 
                     I made this site to flex and learn Next.JS and Chakra. 
                     I&lsquo;m in love with vinyl, amazing at cooking and currently making a smart home. 
                     You can always subscribe to me on {' '}
-                        <Link as={NextLink} href="https://www.instagram.com/fluttybeats/" passHref scroll={false}>
-                            instagram
-                        </Link>
+                    <Link as={NextLink} href="https://www.instagram.com/fluttybeats/" passHref scroll={false}>
+                        instagram
+                    </Link>
                     . Also you can check my github, there are no particularly interesting projects yet, but someday there will be.
-                    </Paragraph>
-                    <Box align="center" my={4}>
-                        <Button
-                            as={NextLink}
-                            href="https://github.com/ysachiko"
-                            scroll={false}
-                            rightIcon={<ChevronRightIcon />}
-                            colorScheme="teal"
-                        >
-                            my git
-                        </Button>
-                    </Box>
+                </Paragraph>
+                <Box align="center" my={4}>
+                    <Button
+                        as={NextLink}
+                        href="https://github.com/ysachiko"
+                        scroll={false}
+                        rightIcon={<ChevronRightIcon />}
+                        colorScheme="teal"
+                    >
+                        my git
+                    </Button>
+                </Box>
             </Section>
 
             <Section delay={0.2}>
@@ -100,9 +105,9 @@ const Page = () => {
                     <BioYear>
                         2021
                     </BioYear>
-                   Worked at <Link as={NextLink} href="https://fabuma.ru/" passHref scroll={false}>
-                            Fabuma Records.
-                        </Link>
+                    Worked at <Link as={NextLink} href="https://fabuma.ru/" passHref scroll={false}>
+                        Fabuma Records.
+                    </Link>
                 </BioSection>
                 <BioSection>
                     <BioYear>

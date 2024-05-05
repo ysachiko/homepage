@@ -31,16 +31,16 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
             bg={active ? 'grassTeal' : undefined}
             color={active ? '#202023' : inactiveColor}
             target={target}
-        {...props}
-      >
-        {children}
-      </Link>
+            {...props}
+        >
+            {children}
+        </Link>
     )
 }
 
 const MenuLink = forwardRef((props, ref) => (
     <Link ref={ref} as={NextLink} {...props} />
-  ))
+))
 
 const Navbar = props => {
     const {path} = props
@@ -62,14 +62,14 @@ const Navbar = props => {
                     mt={{ base: 4, md: 0 }}
                 >
                     <LinkItem href="/music" path={path}>
-                         Music
+                        Music
                     </LinkItem>       
                     <LinkItem href="/posts" path={path}>
                         Posts
                     </LinkItem>
                 </Stack>
                 <Box flex={1} align="right">
-                <ThemeToggleButton />
+                    <ThemeToggleButton />
                     <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
                         <Menu>
                             <MenuButton

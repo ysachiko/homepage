@@ -10,7 +10,8 @@
     "baseUrl": ".",
     "paths": {
       "*": [
-        "./pages/*"
+        "./pages/*",
+        "./components/*"
       ]
     },
     "lib": [
@@ -29,7 +30,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/_app.js"  ],
+, "pages/_app.ts", "components/layouts/main.tsx"  ],
   "exclude": [
     "node_modules"
   ]
