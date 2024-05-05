@@ -19,31 +19,31 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button';
 
 
-// const LinkItem = ({ href, path, target, children, ...props }) => {
-//     const active = path === href
-//     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-//     return (
-//         <Link
-//             as={NextLink}
-//             href={href}
-//             scroll={false}
-//             p={2}
-//             bg={active ? 'grassTeal' : undefined}
-//             color={active ? '#202023' : inactiveColor}
-//             target={target}
-//         {...props}
-//       >
-//         {children}
-//       </Link>
-//     )
-// }
+const LinkItem = ({ href, path, target, children, ...props }) => {
+    const active = path === href
+    const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+    return (
+        <Link
+            as={NextLink}
+            href={href}
+            scroll={false}
+            p={2}
+            bg={active ? 'grassTeal' : undefined}
+            color={active ? '#202023' : inactiveColor}
+            target={target}
+        {...props}
+      >
+        {children}
+      </Link>
+    )
+}
 
 const MenuLink = forwardRef((props, ref) => (
     <Link ref={ref} as={NextLink} {...props} />
   ))
 
 const Navbar = props => {
-    // const {path} = props
+    const {path} = props
 
     return (
         <Box position="fixed" as="nav" w="100%" bg={useColorModeValue('#ffffff40', '#20202380')} style={{backdropFilter:'blur(10px'}} zIndex={1} {...props}>
@@ -61,12 +61,12 @@ const Navbar = props => {
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}
                 >
-                    {/* <LinkItem href="/works" path={path}>
-                         Works
+                    <LinkItem href="/music" path={path}>
+                         Music
                     </LinkItem>       
                     <LinkItem href="/posts" path={path}>
                         Posts
-                    </LinkItem> */}
+                    </LinkItem>
                 </Stack>
                 <Box flex={1} align="right">
                 <ThemeToggleButton />
@@ -82,12 +82,12 @@ const Navbar = props => {
                                 <MenuItem as={MenuLink} href="/">
                                     About
                                 </MenuItem>
-                                {/* <MenuItem as={MenuLink} href="/works">
+                                <MenuItem as={MenuLink} href="/music">
                                     Works
                                 </MenuItem>
                                 <MenuItem as={MenuLink} href="/posts">
                                     Posts
-                                </MenuItem> */}
+                                </MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>

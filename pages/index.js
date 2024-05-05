@@ -36,7 +36,7 @@ const Page = () => {
                 >
                     <Box
                         borderColor="whiteAlpha.800"
-                        borderWidth={2}
+                        borderWidth={1}
                         borderStyle="solid"
                         w="100px"
                         h="100px"
@@ -46,12 +46,12 @@ const Page = () => {
                     >
                         <Image 
                             borderColor="whiteAlpha.800" 
-                            borderWidth={2} 
+                            borderWidth={1} 
                             borderStyle="solid" 
                             maxWidth="100px" 
                             display="inline-block" 
                             borderRadius="full" 
-                            src="/images/YK.png" 
+                            src="/images/me.jpg" 
                             alt="profile image"
                         /> 
                     </Box>
@@ -64,7 +64,7 @@ const Page = () => {
                     <Paragraph>
                     Greetings, guys. 
                     As you may have already read, 
-                    I am a frontend developer, working for the Russian company &ldquo;Samokat&ldquo;. 
+                    I am a frontend developer, working for the Russian company &ldquo;Sbermarket&ldquo;. 
                     I made this site to flex and learn Next.JS and Chakra. 
                     I&lsquo;m in love with vinyl, amazing at cooking and currently making a smart home. 
                     You can always subscribe to me on {' '}
@@ -114,7 +114,7 @@ const Page = () => {
                     <BioYear>
                         2023 to present
                     </BioYear>
-                    Works at Samokat.
+                    Works at Sbermarket.
                 </BioSection>
             </Section>
         </Container>
