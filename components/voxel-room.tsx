@@ -23,7 +23,6 @@ interface VoxelRoomProps {
 
 
 const VoxelRoom = ({modelName = '/my_computer.glb', initialScale = undefined, pos}: VoxelRoomProps) => {
-    console.log(modelName)
     const refContainer = useRef<HTMLDivElement>();
     const [loading, setLoading] = useState(true);
     const [renderer, setRenderer] = useState<THREE.WebGLRenderer>();
@@ -71,7 +70,6 @@ const VoxelRoom = ({modelName = '/my_computer.glb', initialScale = undefined, po
 			  // 640 -> 240
 			  // 8   -> 6
 			  const scale = initialScale ?? scH * 0.005 + 4.8
-			  console.log(scale)
 			  const camera = new THREE.OrthographicCamera(
                 -scale,
                 scale,
@@ -95,6 +93,7 @@ const VoxelRoom = ({modelName = '/my_computer.glb', initialScale = undefined, po
                 receiveShadow: false,
                 castShadow: false
 			  }).then(() => {
+                console.log('rerender')
                 animate()
                 setLoading(false)
 			  })

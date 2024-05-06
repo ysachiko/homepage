@@ -1,6 +1,10 @@
 {
     "root": true,
-    "extends": "next",
+    "extends": [
+      "next/core-web-vitals",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
     "plugins": [
       "react",
       "@typescript-eslint",
@@ -14,6 +18,11 @@
           "varsIgnorePattern": "^_"
         }
       ],
+      "@typescript-eslint/no-unused-vars": ["error", {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }],
+      "@typescript-eslint/ban-ts-comment": "off",
       "react/display-name": 0,
       "react/jsx-indent": [2, 4],
       "react/jsx-indent-props": [2, 4],
