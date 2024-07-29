@@ -44,7 +44,7 @@ const Page = () => {
                         Yura Kovalev
                     </Heading>
                     <p>
-                        Internet Serfer (Musician / Developer / Flower Boy)
+                        Internet Surfer (Musician / Developer / Flower Boy)
                     </p>
                 </Box>
                 <Box
@@ -63,16 +63,16 @@ const Page = () => {
                         borderRadius="full"
                         overflow="hidden"
                     >
-                        <Image 
-                            borderColor="whiteAlpha.800" 
-                            borderWidth={1} 
-                            borderStyle="solid" 
-                            maxWidth="100px" 
-                            display="inline-block" 
-                            borderRadius="full" 
-                            src="/images/me.jpg" 
+                        <Image
+                            borderColor="whiteAlpha.800"
+                            borderWidth={1}
+                            borderStyle="solid"
+                            maxWidth="100px"
+                            display="inline-block"
+                            borderRadius="full"
+                            src="/images/me.jpg"
                             alt="profile image"
-                        /> 
+                        />
                     </Box>
                 </Box>
             </Box>
@@ -81,11 +81,11 @@ const Page = () => {
                     Work
                 </Heading>
                 <Paragraph>
-                    Greetings, guys. 
-                    As you may have already read, 
-                    I am a frontend developer, working for the Russian company &ldquo;Sbermarket&ldquo;. 
-                    I made this site to flex and learn Next.JS and Chakra. 
-                    I&lsquo;m in love with vinyl, amazing at cooking and currently making a smart home. 
+                    Greetings, guys.
+                    As you may have already read,
+                    I am a frontend developer, working for the Russian company &ldquo;Sbermarket&ldquo;.
+                    I made this site to flex and learn Next.JS and Chakra.
+                    I&lsquo;m in love with vinyl, amazing at cooking and currently making a smart home.
                     You can always subscribe to me on {' '}
                     <Link as={NextLink} href="https://www.instagram.com/fluttybeats/" passHref scroll={false}>
                         instagram
@@ -137,7 +137,7 @@ const Page = () => {
                 </BioSection>
             </Section>
         </Container>
-        
+
     )
 }
 
