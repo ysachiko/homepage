@@ -22,6 +22,9 @@ const TravelPage = () => {
                 <Link href="/travel/dombay"><LinkText>Dombay 2024</LinkText></Link>
                 <Link href="/travel/voronezh"><LinkText>Voronezh 2024</LinkText></Link>
                 <Link href="/travel/kazan"><LinkText>Kazan 2024</LinkText></Link>
+                <Link href="/travel/teriberka"><LinkText>Teriberka 2023</LinkText></Link>
+                <Link href="/travel/yaroslavl"><LinkText>Yaroslavl 2023</LinkText></Link>
+                <Link href="/travel/kostroma"><LinkText>Kostroma 2023</LinkText></Link>
             </Box>
         </>
     )

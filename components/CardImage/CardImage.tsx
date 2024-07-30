@@ -1,5 +1,5 @@
 import {FC, useState} from "react";
-import {Image, Modal, ModalCloseButton, ModalContent, ModalOverlay} from "@chakra-ui/react";
+import { Image, Modal, ModalCloseButton, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const OverlayOne = () => (
