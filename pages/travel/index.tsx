@@ -21,6 +21,7 @@ const TravelPage = () => {
             <Box display="flex" padding='15px' flexDirection='column' gap="10px" justifyContent="space-between">
                 <Link href="/travel/dombay"><LinkText>Dombay 2024</LinkText></Link>
                 <Link href="/travel/voronezh"><LinkText>Voronezh 2024</LinkText></Link>
+                <Link href="/travel/kazan"><LinkText>Kazan 2024</LinkText></Link>
             </Box>
         </>
     )
