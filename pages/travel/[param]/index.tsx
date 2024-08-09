@@ -2,18 +2,37 @@ import {Box, Card,Stack, Heading, CardBody} from "@chakra-ui/react"
 import {useEffect, useState} from "react";
 import {CardImage} from "CardImage";
 import {useParams} from "next/navigation";
+import styled from "@emotion/styled";
 
 interface IImage {
     src: string;
     title: string;
 }
 
+const GridBox = styled.div`
+    display: grid;
+    margin: 20px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media only screen and (max-width: 720px) {
+        grid-template-columns: 1fr;
+    }
+`
+
 const images: Record<string, IImage[]> = {
     dombay: [
+        {src: "/images/dombay/img.png", title: "Kislovodsk"},
+        {src: "/images/dombay/img_1.png", title: "w o a"},
+        {src: "/images/dombay/img_2.png", title: "chilling"},
+        {src: "/images/dombay/img_3.png", title: "Kislovodsk 2"},
+        {src: "/images/dombay/img_4.png", title: "happy chilling"},
+        {src: "/images/dombay/img_5.png", title: "feel like Link"},
+        {src: "/images/dombay/img_6.png", title: "ok"},
+        {src: "/images/dombay/img_7.png", title: "mountains"},
         {src: "/images/dombay/night.png", title: "Night in Dombay"},
         {src: "/images/dombay/day.png", title: "Tur'ye lake"},
-        {src: "/images/dombay/Night_2.png", title: "Night in Dombay 2"},
-        {src: "/images/dombay/waterfall.png", title: "waterfall"}],
+        {src: "/images/dombay/Night_2.png", title: "Night in Dombay 2"},],
     kazan: [
         {src: "/images/kazan/img.png", title: "coffee"},
         {src: "/images/kazan/img_1.png", title: ""},
@@ -52,9 +71,9 @@ const SubTravelPage = () => {
 
     return(
         <>
-            <Box display="flex" margin="20px" gap={"20px"} flexDirection="column" alignItems="center" justifyContent="space-between">
+            <GridBox >
                 {data?.map((src) =>
-                    <Card maxW='sm' key={src.src}>
+                    <Card maxW='sm' h={'fit-content'} key={src.src}>
                         <CardBody>
                             <CardImage src={src.src}/>
                             <Stack mt='6' spacing='3'>
@@ -63,7 +82,7 @@ const SubTravelPage = () => {
                         </CardBody>
                     </Card>
                 )}
-            </Box>
+            </GridBox>
         </>
     )
 }

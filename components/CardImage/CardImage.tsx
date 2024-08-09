@@ -1,6 +1,7 @@
 import {FC, useState} from "react";
-import { Image, Modal, ModalCloseButton, ModalContent, ModalOverlay} from "@chakra-ui/react";
+import {Box, Modal, ModalCloseButton, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import Image from 'next/image'
 
 const OverlayOne = () => (
     <ModalOverlay
@@ -21,18 +22,21 @@ export const CardImage:FC<{src: string}> = ({src}) => {
         <>
             <StyledImage
                 onClick={() => setIsOpen(true)}
-                display="inline-block"
+                width={500}
+                height={500}
                 src={src}
                 alt="profile image"
             />
             <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
                 <OverlayOne/>
-                <ModalContent>
+                <ModalContent w={'auto'} h={'auto'} maxW={'700px'} maxH={'700px'}>
                     <ModalCloseButton />
                     <Image
                         onClick={() => setIsOpen(true)}
-                        display="inline-block"
                         src={src}
+                        quality={100}
+                        width={500}
+                        height={300}
                         alt="profile image"
                     />
                 </ModalContent>
