@@ -1,4 +1,4 @@
-import {Box, Card,Stack, Heading, CardBody} from "@chakra-ui/react"
+import { Card,Stack, Heading, CardBody} from "@chakra-ui/react"
 import {useEffect, useState} from "react";
 import {CardImage} from "CardImage";
 import {useParams} from "next/navigation";

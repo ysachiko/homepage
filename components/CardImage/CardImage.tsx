@@ -1,5 +1,5 @@
 import {FC, useState} from "react";
-import {Box, Modal, ModalCloseButton, ModalContent, ModalOverlay} from "@chakra-ui/react";
+import { Modal, ModalCloseButton, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import Image from 'next/image'
 
