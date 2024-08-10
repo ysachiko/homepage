@@ -70,6 +70,9 @@ const Navbar = props => {
                     <LinkItem href="/travel" path={path}>
                         Travel
                     </LinkItem>
+                    <LinkItem href="/vinyl" path={path}>
+                        Vinyl
+                    </LinkItem>
                 </Stack>
                 <Box flex={1} align="right">
                     <ThemeToggleButton />
@@ -93,6 +96,9 @@ const Navbar = props => {
                                 </MenuItem>
                                 <MenuItem as={MenuLink} href="/travel">
                                     Travel
+                                </MenuItem>
+                                <MenuItem as={MenuLink} href="/vinyl">
+                                    Vinyl
                                 </MenuItem>
                             </MenuList>
                         </Menu>

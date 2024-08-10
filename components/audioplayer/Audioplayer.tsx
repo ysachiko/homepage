@@ -12,15 +12,13 @@ const formatTime = (seconds?: number) => {
 
 const contentUrls = [
     {
+        imageUrl: '/images/podique.jpg',
+        audioUrl: '/music/Podique ᵔ◡ᵔx Молодой Юра - Зависимость.mp3',
+    },
+    {
         imageUrl: '/images/boosya.jpg',
         audioUrl: '/music/YuYu - он не хочет мою нежность.mp3',
     },
-    {
-        imageUrl: '/images/podique.jpg',
-        audioUrl: '/music/Podique ᵔ◡ᵔx Молодой Юра - Зависимость.mp3',
-    }
-    
-    
 ]
 
 const surferConfig: Partial<WaveSurferOptions> = {
@@ -34,21 +32,21 @@ export const AudioPlayer = ( ) => {
     const containerRef = useRef(null)
     const [urlIndex, setUrlIndex] = useState(0)
     const [volume, setVolume] = useState(0.5)
-  
+
     const { wavesurfer, isPlaying, currentTime } = useWavesurfer({
         ...surferConfig,
         container: containerRef,
         url: contentUrls[urlIndex].audioUrl,
     })
-  
+
     const onUrlChange = useCallback(() => {
         setUrlIndex((index) => (index + 1) % contentUrls.length)
     }, [])
-  
+
     const onPlayPause = useCallback(() => {
         wavesurfer && wavesurfer.playPause()
     }, [wavesurfer])
-  
+
 
     const handleVolume = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         setVolume(parseFloat(e.target.value))
@@ -63,23 +61,23 @@ export const AudioPlayer = ( ) => {
     return (
         <>
             <Box ref={containerRef} />
-            
+
             <Box>
                 <TrackInfoContainer>
                     <AudioImage
-                        boxSize='100px' 
-                        src={contentUrls[urlIndex].imageUrl} 
+                        boxSize='100px'
+                        src={contentUrls[urlIndex].imageUrl}
                         alt="profile image"
-                    /> 
+                    />
                     <TitleTrackContainer>
                         <Text>{contentUrls[urlIndex].audioUrl.substring(7)}</Text>
-  
+
                         <Text>
                             {formatTime(currentTime)} / {formatTime(wavesurfer?.getDuration())}
                         </Text>
                     </TitleTrackContainer>
                 </TrackInfoContainer>
-                
+
 
                 <ButtonsContainer>
                     <Button colorScheme={useColorModeValue('purple', 'orange')} onClick={onUrlChange}>Change audio</Button>
@@ -101,7 +99,7 @@ export const AudioPlayer = ( ) => {
                     </Button>
                 </ButtonsContainer>
             </Box>
-            
+
         </>
     )
 }
