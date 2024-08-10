@@ -2,6 +2,20 @@ import {Box, Heading, SimpleGrid} from "@chakra-ui/react"
 import VoxelRoom from '../components/voxel-room'
 import NoSsr from "../components/no-ssr";
 import Image from "next/image";
+import styled from "@emotion/styled";
+
+const StyledGrid = styled(SimpleGrid)`
+    margin-top: 20px;
+    @media (max-width: 720px) {
+        justify-items: center;
+    }
+`
+
+const StyledTitle = styled(Heading)`
+    @media (max-width: 720px) {
+        text-align: center;
+    }
+`
 
 const PostPage = () => {
     return(
@@ -9,8 +23,8 @@ const PostPage = () => {
             <NoSsr>
                 <VoxelRoom initialScale={2.5} modelName='/vinyl_player.glb' />
             </NoSsr>
-            <Heading>My Vinyl</Heading>
-            <SimpleGrid minChildWidth='300px' alignItems={'center'} spacing='40px' mt={'20px'}>
+            <StyledTitle>My Vinyl</StyledTitle>
+            <StyledGrid minChildWidth='300px' spacing='40px'>
                 <Box maxH='300px' maxW='300px'>
                     <Image src={"/images/vinyl/img.png"} alt={'vinyl'} height={300} width={300}/>
                 </Box>
@@ -65,7 +79,7 @@ const PostPage = () => {
                 <Box maxH='300px' maxW='300px'>
                     <Image src={"/images/vinyl/img_18.png"} alt={'vinyl'} height={300} width={300}  />
                 </Box>
-            </SimpleGrid>
+            </StyledGrid>
         </Box>
     )
 }
