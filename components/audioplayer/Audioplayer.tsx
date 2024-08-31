@@ -15,10 +15,6 @@ const contentUrls = [
         imageUrl: '/images/podique.jpg',
         audioUrl: '/music/Podique ᵔ◡ᵔx Молодой Юра - Зависимость.mp3',
     },
-    {
-        imageUrl: '/images/boosya.jpg',
-        audioUrl: '/music/YuYu - он не хочет мою нежность.mp3',
-    },
 ]
 
 const surferConfig: Partial<WaveSurferOptions> = {

@@ -1,6 +1,6 @@
 import {Box, Heading, SimpleGrid, Text} from "@chakra-ui/react"
 import VoxelRoom from '../components/voxel-room'
-import NoSsr from "../components/no-ssr";
+import NoSsr from "no-ssr";
 import Image from "next/image";
 import styled from "@emotion/styled";
 
@@ -19,6 +19,10 @@ const StyledTitle = styled(Heading)`
 
 const data = [
     {src: "/images/vinyl/img.png", title: 'Frank Ocean - Blonde'},
+    {src: "/images/vinyl/dr_1.jpg", title: 'Ye - My Beautiful Dark Twisted Fantasy'},
+    {src: "/images/vinyl/dr_2.jpg", title: 'A$AP Rocky - At. Long. Last. ASAP'},
+    {src: "/images/vinyl/dr_3.jpg", title: 'Doja Cat - Hot Pink'},
+    {src: "/images/vinyl/dr_4.jpg", title: 'Yung Lean - Stranger'},
     {src: "/images/vinyl/img_1.png", title: 'Daft Punk - Random Access Memories'},
     {src: "/images/vinyl/img_2.png", title: 'JPEGMAFIA - All My Heroes Are Cornballs'},
     {src: "/images/vinyl/img_3.png", title: 'David Bowie - The Rise and Fall of Ziggy Stardust and the Spiders from Mars'},

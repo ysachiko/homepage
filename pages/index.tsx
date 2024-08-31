@@ -9,11 +9,11 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import Section from "../components/section";
-import Paragraph from '../components/paragraph'
+import Paragraph from 'paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { BioSection, BioYear } from '../components/bio';
 import VoxelRoom from '../components/voxel-room'
-import NoSsr from "../components/no-ssr";
+import NoSsr from "no-ssr";
 import styled from '@emotion/styled';
 
 const ButtonContainer = styled(Box)`
